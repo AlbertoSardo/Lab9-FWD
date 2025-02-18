@@ -1,26 +1,21 @@
-function init() {
-    // Get references to the DOM elements
-    const button = document.getElementById("alertButton");
-    const inputField = document.getElementById("nameInput");
+// JS Event Handling Lab
+// Author: Alberto Sardo
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Select elements
+    const alertButton = document.getElementById("alertButton");
+    const inputField = document.getElementById("textInput");
     const headline = document.getElementById("headline");
     
-    if (!button || !inputField || !headline) {
-        console.error("One or more elements are missing from the DOM.");
-        return;
-    }
-
-    // Add event listener for button click
-    button.addEventListener("click", function () {
-        // Get input value
-        const inputValue = inputField.value;
+    // Event Listener for button click
+    alertButton.addEventListener("click", function () {
+        const userInput = inputField.value;
+        const alertMessage = "Alberto: " + userInput;
+        alert(alertMessage);
         
-        // Show alert with name prefix
-        alert("Alberto: " + inputValue);
-        
-        // Change headline text
-        headline.textContent = inputValue;
+        // Update the headline with the input value
+        headline.textContent = userInput;
     });
-}
+});
 
-window.addEventListener("DOMContentLoaded", init);
 
