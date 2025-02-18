@@ -15,7 +15,7 @@ function init() {
         const inputValue = inputField.value;
         
         // Show alert with name prefix
-        alert("[Your Name]: " + inputValue);
+        alert("Alberto: " + inputValue);
         
         // Change headline text
         headline.textContent = inputValue;
